@@ -1,0 +1,5 @@
+---
+# handlers file for notes-app
+# After edit any file in /etc/systemd/system/, systemd must reload
+- name: Reload systemd
+  command: systemctl daemon-reexec

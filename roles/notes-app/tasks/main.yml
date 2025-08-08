@@ -1,0 +1,50 @@
+---
+# tasks file for notes-app
+
+# Install pip3
+- name: Install pip3
+  yum:
+    name: python3-pip
+    state: present
+
+# Install #python & sqlite
+- name: Install Packages
+  yum: 
+   name: 
+    - python3
+    - sqlite
+   state: present
+
+# Install flask
+- name: Install Flask
+  pip: 
+   name: flask
+   executable: pip3 # to difference between pip & pip3
+
+# create app directory
+- name: Create Directory
+  file: 
+   path: "{{ app_path }}"
+   state: directory
+
+# Copy app to server 
+- name: Copy app to server
+  copy: 
+   src: app.py
+   dest: "{{ app_path }}/app.py"
+   mode: '0755'
+
+# Copy systemd service file 
+- name: Copy systemd service file
+  copy:
+    src: notes-app.service
+    dest: /etc/systemd/system/notes-app.service
+    mode: '0644'
+  notify: Reload systemd
+
+# Enable and start the app service
+- name: Enable and start notes-app service
+  systemd:
+    name: "{{ service_name }}"
+    enabled: yes
+    state: started

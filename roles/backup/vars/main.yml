@@ -1,0 +1,4 @@
+---
+# vars file for backup
+backup_dir: "{{ app_path }}/backups"
+app_path: /opt/notes-app

@@ -1,0 +1,12 @@
+[Unit]
+Description=Flask Notes App
+After=network.target
+
+[Service]
+User=ec2-user
+WorkingDirectory=/opt/notes-app
+ExecStart=/usr/bin/python3 /opt/notes-app/app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

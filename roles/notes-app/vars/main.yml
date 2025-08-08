@@ -1,0 +1,4 @@
+---
+# vars file for notes-app
+app_path: /opt/notes-app/
+service_name: notes-app 

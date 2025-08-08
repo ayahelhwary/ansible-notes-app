@@ -1,0 +1,8 @@
+- name: Deploy Note-Taking Web App on EC2
+  hosts: web 
+  become: true
+  vars_files:
+    - roles/notes-app/vars/main.yml
+  roles:
+    - notes-app
+    - backup
