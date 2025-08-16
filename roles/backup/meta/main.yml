@@ -1,0 +1,25 @@
+---
+galaxy_info:
+  role_name: backup
+  author: Aya Elhwary
+  description: >
+    Configures cron-based backups for the Notes App SQLite database.
+  license: MIT
+  min_ansible_version: 2.9
+
+  platforms:
+    - name: EL
+      versions:
+        - 7
+        - 8
+    - name: Amazon
+      versions:
+        - "2"
+
+  galaxy_tags:
+    - backup
+    - cron
+    - sqlite
+    - automation
+
+dependencies: []
