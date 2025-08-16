@@ -34,17 +34,17 @@ ansible-project/
 ├── images
 │   ├── demo.png
 │   └── project-structure.png
-├── roles/
-│   ├── notes-app/
-│   │   ├── tasks/
-│   │   ├── files/
-│   │   ├── vars/
-│   │   ├── handlers/
-│   │   └── meta/
-│   └── backup/
-│       ├── tasks/
-│       ├── vars/
-│       └── meta/
+└── roles/
+    ├── notes-app/
+    │   ├── tasks/
+    │   ├── files/
+    │   ├── vars/
+    │   ├── handlers/
+    │   └── meta/
+    └── backup/
+        ├── tasks/
+        ├── vars/
+        └── meta/
 ```
 
 ![Project Structure](images/project-structure.png)
